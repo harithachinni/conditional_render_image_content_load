@@ -12,7 +12,12 @@ const Qncomponent = ({ title, info }) => {
                     <button className="circle" onClick={() => setShow(!show)}>{show ? <FaMinusCircle size={15} /> : <FaPlusCircle size={15} />}</button>
                 </div>
             </div>
-            {show && <div className="answer">{info}</div>}
+            <div className="popup-container active">
+                {show && <div className="answer">
+                    <button className="close-btn" onClick={() => setShow(!show)}>&times;</button>
+                    <p>{info}
+                    </p></div>}
+            </div>
         </>
     )
 }

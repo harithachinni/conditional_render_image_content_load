@@ -2,6 +2,18 @@ body {
   text-align: center;
 }
 
+.active {
+  text-decoration: none;
+}
+
+.qn-container.circle {
+  backdrop-filter: blur(2px);
+}
+
+.active:hover {
+  color: black;
+}
+
 img {
   width: 10%;
   height: 10%;
@@ -16,4 +28,28 @@ img {
 .qn-container {
   display: flex;
   gap: 100px;
+}
+
+.answer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0.1);
+}
+
+.popup-container>* {
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  border: none;
+  cursor: pointer;
 }
